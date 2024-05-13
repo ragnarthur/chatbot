@@ -2,10 +2,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const chatWindow = document.getElementById('chat-window');
     const userInput = document.getElementById('user-input');
     const sendButton = document.getElementById('send-button');
+    const languageSelect = document.getElementById('language-select');
 
     async function sendMessage() {
         const userMessage = userInput.value.trim();
-        if (!userMessage) return;
+        const selectedLanguage = languageSelect.value.trim();
+        if (!userMessage || !selectedLanguage) return;
 
         // Adiciona a mensagem do usuário ao chat
         const userMessageElement = document.createElement('div');
@@ -19,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const response = await fetch('/chatbot', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ message: userMessage })
+                body: JSON.stringify({ message: userMessage, language: selectedLanguage })
             });
             const data = await response.json();
             const botResponse = data.response;
