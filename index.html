@@ -4,28 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chatbot</title>
-    <!-- Atualize o caminho do CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Caminho do CSS atualizado -->
 </head>
 <body>
-    <h1>Chatbot</h1>
-    <input type="text" id="userInput" placeholder="Digite sua mensagem aqui">
-    <button onclick="sendMessage()">Enviar</button>
-    <p id="response"></p>
-
-    <!-- Atualize o caminho do JavaScript -->
-    <script src="app.js"></script>
-    <script>
-        async function sendMessage() {
-            const userInput = document.getElementById('userInput').value;
-            const response = await fetch('/chat', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ message: userInput })
-            });
-            const data = await response.json();
-            document.getElementById('response').innerText = data.response;
-        }
-    </script>
+    <div id="app-container">
+        <h1>Chatbot</h1>
+        <h2>Seu guia para estudos em programação!</h2>
+        <div id="chat-container">
+            <div id="chat-window"></div>
+            <div id="loading-message">Pesquisando<span>...</span></div> <!-- Mensagem de carregamento atualizada -->
+        </div>
+        <div id="input-container">
+            <select id="language-select">
+                <option value="python">Python</option>
+                <option value="javascript">JavaScript</option>
+                <option value="css">CSS</option>
+                <option value="html">HTML</option>
+                <option value="langchain">LangChain</option>
+                <option value="react">React</option>
+                <option value="java">Java</option>
+            </select>
+            <input type="text" id="user-input" placeholder="Digite sua mensagem aqui">
+            <button id="send-button">Enviar</button>
+        </div>
+    </div>
+    <script src="app.js"></script> <!-- Caminho do JavaScript atualizado -->
 </body>
 </html>

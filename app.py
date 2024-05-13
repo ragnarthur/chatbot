@@ -1,10 +1,10 @@
 from flask import Flask, request, jsonify, send_from_directory
-from flask_caching import Cache
 import requests
 import json
 from backend.senha import API_KEY
 
-app = Flask(__name__, static_folder='frontend')
+app = Flask(__name__, static_folder='.')
+
 session = requests.Session()  # Cria uma sessão para reutilizar conexões TCP
 
 # Dicionário de linguagens de programação permitidas e termos relacionados
@@ -37,7 +37,7 @@ id_modelo = "gpt-3.5-turbo"
 
 @app.route("/")
 def index():
-    return send_from_directory('frontend', 'index.html')
+    return send_from_directory('.', 'index.html')
 
 @app.route("/chatbot", methods=["POST"])
 def chatbot():
@@ -63,7 +63,7 @@ def chatbot():
 
 @app.route('/<path:path>')
 def static_file(path):
-    return send_from_directory('frontend', path)
+    return send_from_directory('.', path)
 
 if __name__ == "__main__":
     app.run(port=5000, debug=True)
