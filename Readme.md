@@ -75,5 +75,7 @@ This project is licensed under the MIT License. For more details, see the LICENS
 If you want to get in touch with me or follow my work, here are some ways to do it:
 
 Email: arthuraraujo07@hotmail.com
+
 GitHub: ragnarthur
+
 Instagram: @arthuraraujo07
