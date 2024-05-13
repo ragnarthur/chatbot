@@ -10,11 +10,11 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!userMessage || !selectedLanguage) return;
 
         // Adiciona a mensagem do usuário ao chat
-        const userMessageElement = document.createElement('div');
-        userMessageElement.classList.add('user-message');
-        userMessageElement.innerHTML = `<strong>Você:</strong> ${userMessage}`;
-        chatWindow.appendChild(userMessageElement);
+        addMessageToChat('user', userMessage);
         userInput.value = ''; // Limpa o campo de input
+
+        // Mostra a mensagem de carregamento e esconde após resposta
+        showLoadingMessage(true);
 
         try {
             // Envia a mensagem ao backend para obter a resposta
@@ -24,25 +24,45 @@ document.addEventListener('DOMContentLoaded', function () {
                 body: JSON.stringify({ message: userMessage, language: selectedLanguage })
             });
             const data = await response.json();
-            const botResponse = data.response;
+            const botResponse = escapeHtml(data.response);
 
             // Adiciona a resposta do bot ao chat
-            const botMessageElement = document.createElement('div');
-            botMessageElement.classList.add('bot-message');
-            botMessageElement.innerHTML = `<strong>Bot:</strong> ${botResponse}`;
-            chatWindow.appendChild(botMessageElement);
-
-            // Rola para a última mensagem
-            chatWindow.scrollTop = chatWindow.scrollHeight;
-
+            addMessageToChat('bot', botResponse);
         } catch (error) {
             console.error('Error:', error);
+        } finally {
+            // Sempre esconde a mensagem de carregamento
+            showLoadingMessage(false);
         }
     }
 
-    sendButton.addEventListener('click', sendMessage);
+    function addMessageToChat(role, message) {
+        const messageElement = document.createElement('div');
+        messageElement.classList.add(`${role}-message`);
+        messageElement.innerHTML = `<strong>${role === 'user' ? 'Você' : 'Bot'}:</strong> ${message}`;
+        chatWindow.appendChild(messageElement);
+        chatWindow.scrollTop = chatWindow.scrollHeight;
+    }
 
-    // Envia a mensagem quando pressionar Enter
+    function showLoadingMessage(show) {
+        const loadingMessage = document.getElementById('loading-message') || createLoadingMessage();
+        loadingMessage.style.display = show ? 'block' : 'none';
+    }
+
+    function createLoadingMessage() {
+        const loadingMessage = document.createElement('div');
+        loadingMessage.id = 'loading-message';
+        loadingMessage.textContent = 'Pesquisando...';
+        loadingMessage.style.display = 'none';
+        chatWindow.appendChild(loadingMessage);
+        return loadingMessage;
+    }
+
+    function escapeHtml(text) {
+        return text.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    }
+
+    sendButton.addEventListener('click', sendMessage);
     userInput.addEventListener('keypress', function (event) {
         if (event.key === 'Enter') {
             sendMessage();
