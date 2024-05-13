@@ -22,7 +22,7 @@ allowed_languages = {
               'web components'],
     'langchain': ['langchain', 'lcc', 'language chain', 'nlp', 'text processing', 'tokenization', 'lemmatization', 
                   'stemming', 'ner', 'named entity recognition', 'sentiment analysis', 'language models', 'text generation', 
-                  'language modeling'],
+                  'language modeling', 'framework'],
     'react': ['react', 'react.js', 'jsx', 'react native', 'redux', 'react hooks', 'context api', 'next.js', 'gatsby', 
               'create-react-app', 'component', 'props', 'state', 'lifecycle', 'effect', 'memo', 'ref', 'router', 'flux',
                 'server-side rendering', 'ssr', 'hydration', 'virtual dom'],
