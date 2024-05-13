@@ -1,18 +1,20 @@
 from flask import Flask, request, jsonify, send_from_directory
+from flask_caching import Cache
 import requests
 import json
 from backend.senha import API_KEY
 
 app = Flask(__name__, static_folder='frontend')
+session = requests.Session()  # Cria uma sessão para reutilizar conexões TCP
 
 # Dicionário de linguagens de programação permitidas e termos relacionados
 allowed_languages = {
     'python': ['python', 'py', 'pandas', 'flask', 'django', 'numpy', 'scipy', 'tkinter', 'matplotlib', 
                'seaborn', 'pytest', 'pycharm', 'jupyter', 'anaconda', 'pip', 'virtualenv', 'dataframe', 'sklearn', 
-               'tensorflow', 'keras'],
+               'tensorflow', 'keras', 'framework', 'ruby'],
     'javascript': ['javascript', 'js', 'node.js', 'node', 'react', 'react.js', 'vue', 'vue.js', 'angular',
                     'angular.js', 'express', 'npm', 'yarn', 'webpack', 'babel', 'typescript', 'ts', 'jest', 'mocha', 
-                    'chai', 'electron', 'd3.js', 'three.js'],
+                    'chai', 'electron', 'd3.js', 'three.js', 'framework'],
     'css': ['css', 'css3', 'flexbox', 'grid', 'media queries', 'sass', 'scss', 'less', 'bootstrap', 'tailwind', 
             'responsive design', 'animations', 'transitions', 'selectors', 'variables', 'borders', 'margins', 'padding'],
     'html': ['html', 'html5', 'semantic html', 'forms', 'input types', 'canvas', 'svg', 'tables', 'head', 'meta', 'links',
