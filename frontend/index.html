@@ -5,26 +5,32 @@
     <title>ChatBot Estudantes de Programação</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css">  <!-- Verifique se este caminho está correto -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
     <div id="app-container" class="container mt-5 p-4 rounded shadow-lg">
-        <h1 class="mb-4">ChatBot para Estudantes de Programação</h1>
-        <h2 class="mb-3">Escolha sua linguagem</h2>
+        <h1 class="chatbot-title mb-4">ChatBot para Estudantes de Programação</h1>
+        <h2 class="language-select-title mb-3">Escolha sua linguagem</h2>
         <div class="form-group">
-            <select id="language-select" class="form-control">
-                <option value="python">Python</option>
-                <option value="javascript">JavaScript</option>
-                <option value="css">CSS</option>
-                <option value="html">HTML</option>
-                <option value="langchain">LangChain</option>
-                <option value="react">React</option>
-                <option value="java">Java</option>
-            </select>
+            <div id="custom-select-container">
+                <button id="custom-select-button" class="btn btn-secondary dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">
+                    Selecione a linguagem
+                </button>
+                <ul id="custom-select-list" class="dropdown-menu">
+                    <li data-value="python"><i class="fab fa-python"></i> Python</li>
+                    <li data-value="javascript"><i class="fab fa-js-square"></i> JavaScript</li>
+                    <li data-value="css"><i class="fab fa-css3-alt"></i> CSS</li>
+                    <li data-value="html"><i class="fab fa-html5"></i> HTML</li>
+                    <li data-value="langchain">LangChain</li>
+                    <li data-value="react"><i class="fab fa-react"></i> React</li>
+                    <li data-value="java"><i class="fab fa-java"></i> Java</li>
+                </ul>
+            </div>
         </div>
         <div id="chat-container" class="border rounded p-3 mb-3">
             <div id="chat-window" class="mb-3"></div>
-            <div id="loading-message" style="display: none;">Pesquisando...</div>
+            <div id="loading-message" class="loading-message">Pesquisando...</div>
             <div id="input-container" class="input-group">
                 <input type="text" id="user-input" class="form-control" placeholder="Digite sua pergunta...">
                 <div class="input-group-append">
