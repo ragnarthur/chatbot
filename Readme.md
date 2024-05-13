@@ -56,33 +56,25 @@ To install the project, follow the steps below:
 
 ## 🚀 Usage
 
-To start the ChatBot, run the `app.py` script:
+To start the ChatBot, run the following command in your terminal:
+
 ```bash
 python app.py
+```
+🤝 Contributing
+Contributions are welcome! If you have suggestions for improvements or encounter any issues:
 
-🤝 Contribution
-Contributions are welcome! Feel free to open an issue or submit a pull request. For major changes, please open an issue first to discuss what you would like to change.
-
+Report Bugs: Open an issue describing the bug.
+Feature Requests: Open an issue with a detailed description of the feature.
+Submit Changes: Submit a pull request with your proposed changes. For significant changes, please open an issue first to discuss what you would like to change.
 📜 License
-This project is licensed under the MIT License.
+This project is licensed under the MIT License. For more details, see the LICENSE file.
 
 📞 Contact
+If you want to get in touch with me or follow my work, here are some ways to do it:
+
 Email: arthuraraujo07@hotmail.com
 GitHub: ragnarthur
 Instagram: @arthuraraujo07
-
-
-### Explanation of Sections:
-
-1. **Introduction:** Presents the project and its purposes.
-2. **Features:** Describes the capabilities of the ChatBot.
-3. **Installation:** Provides clear instructions to clone the repository and install dependencies.
-4. **Configuration:** Explains how to configure the API key.
-5. **Usage:** Details how to start the ChatBot.
-6. **Contribution:** Guides on how to contribute to the project.
-7. **License:** Specifies the project's license.
-8. **Contact:** Provides contact information for networking or queries.
-
-Feel free to adjust the content as necessary. Good luck with your ChatBot!
 
 
