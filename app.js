@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
         showLoading(true);
 
         try {
-            const response = await fetch('https://<seu-app>.up.railway.app/chatbot', {  // Atualize esta URL
+            const response = await fetch('https://chatbot-production-fb15.up.railway.app', {  // Atualize esta URL
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ message: userMessage, language: selectedLanguage })
