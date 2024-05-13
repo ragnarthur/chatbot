@@ -11,24 +11,24 @@ session = requests.Session()  # Cria uma sessão para reutilizar conexões TCP
 allowed_languages = {
     'python': ['python', 'py', 'pandas', 'flask', 'django', 'numpy', 'scipy', 'tkinter', 'matplotlib', 
                'seaborn', 'pytest', 'pycharm', 'jupyter', 'anaconda', 'pip', 'virtualenv', 'dataframe', 'sklearn', 
-               'tensorflow', 'keras', 'framework', 'ruby'],
+               'tensorflow', 'keras', 'framework', 'ruby', 'scripts'],
     'javascript': ['javascript', 'js', 'node.js', 'node', 'react', 'react.js', 'vue', 'vue.js', 'angular',
                     'angular.js', 'express', 'npm', 'yarn', 'webpack', 'babel', 'typescript', 'ts', 'jest', 'mocha', 
-                    'chai', 'electron', 'd3.js', 'three.js', 'framework'],
+                    'chai', 'electron', 'd3.js', 'three.js', 'framework',"scripts"],
     'css': ['css', 'css3', 'flexbox', 'grid', 'media queries', 'sass', 'scss', 'less', 'bootstrap', 'tailwind', 
-            'responsive design', 'animations', 'transitions', 'selectors', 'variables', 'borders', 'margins', 'padding'],
+            'responsive design', 'animations', 'transitions', 'selectors', 'variables', 'borders', 'margins', 'padding', "scripts"],
     'html': ['html', 'html5', 'semantic html', 'forms', 'input types', 'canvas', 'svg', 'tables', 'head', 'meta', 'links',
               'doctype', 'elements', 'tags', 'attributes', 'inline', 'block', 'iframes', 'media', 'accessibility', 
-              'web components'],
+              'web components', "scripts"],
     'langchain': ['langchain', 'lcc', 'language chain', 'nlp', 'text processing', 'tokenization', 'lemmatization', 
                   'stemming', 'ner', 'named entity recognition', 'sentiment analysis', 'language models', 'text generation', 
-                  'language modeling', 'framework'],
+                  'language modeling', 'framework', "scripts"],
     'react': ['react', 'react.js', 'jsx', 'react native', 'redux', 'react hooks', 'context api', 'next.js', 'gatsby', 
               'create-react-app', 'component', 'props', 'state', 'lifecycle', 'effect', 'memo', 'ref', 'router', 'flux',
-                'server-side rendering', 'ssr', 'hydration', 'virtual dom'],
+                'server-side rendering', 'ssr', 'hydration', 'virtual dom', "scripts"],
     'java': ['java', 'javafx', 'spring', 'jvm', 'jdk', 'jre', 'maven', 'gradle', 'intellij', 'eclipse', 'netbeans', 
              'servlet', 'jsp', 'jdbc', 'hibernate', 'junit', 'lambda', 'streams', 'multithreading', 'concurrency', 
-             'collections', 'garbage collection', 'jpa', 'swing', 'applet']
+             'collections', 'garbage collection', 'jpa', 'swing', 'applet',"scripts"]
 }
 
 headers = {"Authorization": f"Bearer {API_KEY}", "Content-Type": "application/json"}

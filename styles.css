@@ -2,7 +2,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #f0f2f5;
-    background-image: url('https://cdn.pixabay.com/photo/2016/11/19/14/00/code-1839406_1280.jpg');
+    background-image: url('https://cdn.pixabay.com/photo/2018/09/27/09/22/artificial-intelligence-3706562_1280.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -15,23 +15,23 @@ body {
 #app-container {
     width: 90%;
     max-width: 900px;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.5); /* Fundo translúcido */
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
     padding: 40px;
     text-align: center;
     backdrop-filter: blur(10px);
 }
 
 h1 {
-    font-size: 2em;
+    font-size: 2.5em;
     color: #333;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
 h2 {
-    font-size: 1.5em;
+    font-size: 1.8em;
     color: #555;
     font-weight: bold;
     margin-bottom: 20px;
@@ -41,17 +41,18 @@ h2 {
     display: flex;
     flex-direction: column;
     height: 600px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Borda translúcida */
+    border-radius: 15px;
     overflow: hidden;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(240, 240, 240, 0.5); /* Fundo translúcido */
+    backdrop-filter: blur(10px);
 }
 
 #chat-window {
     flex: 1;
     padding: 20px;
     overflow-y: auto;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo translúcido */
     scrollbar-width: thin;
     scrollbar-color: #888 #e0e0e0;
 }
@@ -71,9 +72,10 @@ h2 {
 
 #input-container {
     display: flex;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid rgba(255, 255, 255, 0.5); /* Borda translúcida */
     padding: 10px;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo translúcido */
+    backdrop-filter: blur(10px);
 }
 
 #language-select {
@@ -82,13 +84,7 @@ h2 {
     font-size: 16px;
     border-radius: 5px;
     padding: 10px;
-    background-image: none;
-}
-
-#language-select option {
-    background-repeat: no-repeat;
-    background-position: left center;
-    padding-left: 30px;
+    border: 1px solid #ddd;
 }
 
 #user-input {
@@ -97,6 +93,13 @@ h2 {
     border-radius: 5px 0 0 5px;
     padding: 10px;
     border: 1px solid #ddd;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#user-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.6);
+    outline: none;
 }
 
 #send-button {
@@ -119,7 +122,7 @@ h2 {
     max-width: 90%;
     margin-bottom: 10px;
     padding: 15px;
-    border-radius: 10px;
+    border-radius: 15px;
     animation: fadeIn 0.5s;
     font-size: 1.2rem;
     display: inline-block;
@@ -133,14 +136,16 @@ h2 {
     border: 1px solid #c3e6cb;
     float: right;
     text-align: left;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .bot-message {
-    background-color: rgba(223, 219, 219, 0.9);
+    background-color: rgba(230, 228, 228, 0.9);
     border: 1px solid #ddd;
     color: #333;
     float: left;
     text-align: left;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 #loading-message {
@@ -150,6 +155,7 @@ h2 {
     margin-top: 10px;
     clear: both;
     display: none;
+    font-size: 1.5rem; /* Tamanho da fonte aumentado */
 }
 
 #loading-message span {
