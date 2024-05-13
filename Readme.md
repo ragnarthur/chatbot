@@ -1,88 +1,86 @@
-# 🤖 ChatBot com OpenAI API
+# 🤖 ChatBot with OpenAI API
 
-Bem-vindo ao repositório do ChatBot! Este projeto utiliza a API da OpenAI para criar um chatbot inteligente capaz de responder a uma variedade de perguntas e realizar várias tarefas automatizadas.
+Welcome to the ChatBot repository! This project uses the OpenAI API to create an intelligent chatbot capable of answering a variety of questions and performing various automated tasks.
 
-## 📋 Sumário
+## 📋 Table of Contents
 
-- [Introdução](#introdução)
-- [Funcionalidades](#funcionalidades)
-- [Instalação](#instalação)
-- [Configuração](#configuração)
-- [Uso](#uso)
-- [Contribuição](#contribuição)
-- [Licença](#licença)
-- [Contato](#contato)
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Usage](#usage)
+- [Contribution](#contribution)
+- [License](#license)
+- [Contact](#contact)
 
-## 📘 Introdução
+## 📘 Introduction
 
-Este ChatBot foi desenvolvido para demonstrar as capacidades da API da OpenAI. Ele pode ser utilizado para diversas finalidades, desde atendimento ao cliente até assistentes pessoais.
+This ChatBot was developed to demonstrate the capabilities of the OpenAI API. It can be used for various purposes, from customer service to personal assistants.
 
-## ✨ Funcionalidades
+## ✨ Features
 
-- Respostas automatizadas a perguntas comuns
-- Capacidade de manter um contexto de conversa
-- Integração fácil com outras plataformas
-- Personalização de respostas
+- Automated responses to common questions
+- Ability to maintain conversation context
+- Easy integration with other platforms
+- Response customization
 
-## 🛠️ Instalação
+## 🛠️ Installation
 
-Para instalar o projeto, siga os passos abaixo:
+To install the project, follow the steps below:
 
-1. Clone o repositório:
+1. Clone the repository:
     ```bash
-    git clone https://github.com/seu-usuario/seu-repositorio.git
-    cd seu-repositorio
+    git clone https://github.com/your-username/your-repository.git
+    cd your-repository
     ```
 
-2. Crie e ative um ambiente virtual (opcional, mas recomendado):
+2. Create and activate a virtual environment (optional, but recommended):
     ```bash
     python -m venv venv
     source venv/bin/activate  # Linux/MacOS
     .\venv\Scripts\activate  # Windows
     ```
 
-3. Instale as dependências:
+3. Install the dependencies:
     ```bash
     pip install -r requirements.txt
     ```
 
-## 🔧 Configuração
+## 🔧 Configuration
 
-1. Obtenha uma chave API da OpenAI em [OpenAI API](https://beta.openai.com/signup/).
-2. Crie um arquivo `.env` na raiz do projeto e adicione sua chave API:
+1. Obtain an API key from OpenAI at [OpenAI API](https://beta.openai.com/signup/).
+2. Create a `.env` file in the root of the project and add your API key:
     ```env
     OPENAI_API_KEY=your-api-key
     ```
 
-## 🚀 Uso
+## 🚀 Usage
 
-Para iniciar o ChatBot, execute o script `app.py`:
+To start the ChatBot, run the `app.py` script:
 ```bash
 python app.py
 
-🤝 Contribuição
-Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request. Para grandes mudanças, por favor, abra uma issue primeiro para discutir o que você gostaria de mudar.
+🤝 Contribution
+Contributions are welcome! Feel free to open an issue or submit a pull request. For major changes, please open an issue first to discuss what you would like to change.
 
-📜 Licença
-Este projeto está licenciado sob a MIT License.
+📜 License
+This project is licensed under the MIT License.
 
-📞 Contato
+📞 Contact
 Email: arthuraraujo07@hotmail.com
 GitHub: ragnarthur
 Instagram: @arthuraraujo07
 
-Obrigado por conferir meu projeto! Espero que você ache útil e interessante. Que tal colaborarmos em um projeto?
 
+### Explanation of Sections:
 
-### Explicação das Seções:
+1. **Introduction:** Presents the project and its purposes.
+2. **Features:** Describes the capabilities of the ChatBot.
+3. **Installation:** Provides clear instructions to clone the repository and install dependencies.
+4. **Configuration:** Explains how to configure the API key.
+5. **Usage:** Details how to start the ChatBot.
+6. **Contribution:** Guides on how to contribute to the project.
+7. **License:** Specifies the project's license.
+8. **Contact:** Provides contact information for networking or queries.
 
-1. **Introdução:** Apresenta o projeto e suas finalidades.
-2. **Funcionalidades:** Descreve as capacidades do ChatBot.
-3. **Instalação:** Fornece instruções claras para clonar o repositório e instalar dependências.
-4. **Configuração:** Explica como configurar a chave da API.
-5. **Uso:** Detalha como iniciar o ChatBot.
-6. **Contribuição:** Orienta sobre como contribuir para o projeto.
-7. **Licença:** Especifica a licença do projeto.
-8. **Contato:** Fornece informações de contato para networking ou dúvidas.
-
-Sinta-se à vontade para ajustar o conteúdo conforme necessário. Boa sorte com seu ChatBot!
+Feel free to adjust the content as necessary. Good luck with your ChatBot!
