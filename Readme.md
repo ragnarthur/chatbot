@@ -84,3 +84,5 @@ Instagram: @arthuraraujo07
 8. **Contact:** Provides contact information for networking or queries.
 
 Feel free to adjust the content as necessary. Good luck with your ChatBot!
+
+
