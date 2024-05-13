@@ -9,6 +9,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let selectedLanguage = '';
 
+    // Função para exibir mensagem de boas-vindas
+    function showWelcomeMessage() {
+        const welcomeMessage = "Bem vindo ao ChatBot - Guide, seu guia para estudos em programação! Lembre-se de relacionar os temas do seu estudo com a linguagem específica! Bons estudos!";
+        addMessageToChat('Guide', welcomeMessage, 'bot-message');
+    }
+
     async function sendMessage() {
         const userMessage = userInput.value.trim();
         if (!userMessage || !selectedLanguage) return;
@@ -26,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
             const data = await response.json();
             const botResponse = escapeHtml(data.response);
-            addMessageToChat('Bot', botResponse, 'bot-message');
+            addMessageToChat('Guide', botResponse, 'bot-message');
         } catch (error) {
             console.error('Error:', error);
         } finally {
@@ -74,4 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
             sendMessage();
         }
     });
+
+    // Exibir a mensagem de boas-vindas ao carregar a página
+    showWelcomeMessage();
 });
