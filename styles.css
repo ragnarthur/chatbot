@@ -14,23 +14,24 @@ body {
 
 #app-container {
     width: 90%;
-    max-width: 900px; /* Aumentado para 900px */
-    background-color: rgba(255, 255, 255, 0.9);
+    max-width: 900px;
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    padding: 40px; /* Aumentado para 40px */
+    padding: 40px;
     text-align: center;
+    backdrop-filter: blur(10px);
 }
 
 h1 {
-    font-size: 2em; /* Aumentado para 2em */
+    font-size: 2em;
     color: #333;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
 h2 {
-    font-size: 1.5em; /* Aumentado para 1.5em */
+    font-size: 1.5em;
     color: #555;
     font-weight: bold;
     margin-bottom: 20px;
@@ -39,17 +40,16 @@ h2 {
 #chat-container {
     display: flex;
     flex-direction: column;
-    height: 600px; /* Aumentado para 600px */
+    height: 600px;
     border: 1px solid #ddd;
     border-radius: 10px;
     overflow: hidden;
     background-color: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(10px);
 }
 
 #chat-window {
     flex: 1;
-    padding: 20px; /* Aumentado para 20px */
+    padding: 20px;
     overflow-y: auto;
     background-color: rgba(255, 255, 255, 0.9);
     scrollbar-width: thin;
@@ -77,7 +77,7 @@ h2 {
 }
 
 #language-select {
-    flex: 0 0 200px; /* Aumentado para 200px */
+    flex: 0 0 200px;
     margin-right: 10px;
     font-size: 16px;
     border-radius: 5px;
@@ -91,43 +91,17 @@ h2 {
     padding-left: 30px;
 }
 
-#language-select .python {
-    background-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/python.svg');
-}
-
-#language-select .javascript {
-    background-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/javascript.svg');
-}
-
-#language-select .css {
-    background-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/css3.svg');
-}
-
-#language-select .html {
-    background-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/html5.svg');
-}
-
-#language-select .langchain {
-    background-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/protocols.svg');
-}
-
-#language-select .react {
-    background-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/react.svg');
-}
-
-#language-select .java {
-    background-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/java.svg');
-}
-
 #user-input {
     flex: 1;
     font-size: 16px;
     border-radius: 5px 0 0 5px;
+    padding: 10px;
+    border: 1px solid #ddd;
 }
 
 #send-button {
     padding: 10px 20px;
-    background-color: #007bff;
+    background: linear-gradient(90deg, #007bff 0%, #0056b3 100%);
     color: white;
     border: none;
     cursor: pointer;
@@ -137,14 +111,14 @@ h2 {
 }
 
 #send-button:hover {
-    background-color: #0056b3;
+    background: linear-gradient(90deg, #0056b3 0%, #004080 100%);
     transform: translateY(-2px);
 }
 
 .user-message, .bot-message {
     max-width: 90%;
     margin-bottom: 10px;
-    padding: 15px; /* Aumentado para 15px */
+    padding: 15px;
     border-radius: 10px;
     animation: fadeIn 0.5s;
     font-size: 1.2rem;
@@ -162,7 +136,7 @@ h2 {
 }
 
 .bot-message {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(223, 219, 219, 0.9);
     border: 1px solid #ddd;
     color: #333;
     float: left;
@@ -207,7 +181,6 @@ h2 {
     }
 }
 
-/* Animação de fade-in */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -219,7 +192,6 @@ h2 {
     }
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
     #app-container {
         padding: 15px;
@@ -236,7 +208,7 @@ h2 {
     }
 
     #language-select {
-        flex: 0 0 100px; /* Largura reduzida para telas menores */
+        flex: 0 0 100px;
         font-size: 14px;
     }
 }
