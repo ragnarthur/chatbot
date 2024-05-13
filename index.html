@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chatbot</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Caminho do CSS atualizado -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id="app-container">
@@ -12,22 +12,22 @@
         <h2>Seu guia para estudos em programação!</h2>
         <div id="chat-container">
             <div id="chat-window"></div>
-            <div id="loading-message">Pesquisando<span>...</span></div> <!-- Mensagem de carregamento atualizada -->
+            <div id="loading-message">Pesquisando<span>...</span></div>
         </div>
         <div id="input-container">
             <select id="language-select">
-                <option value="python">Python</option>
-                <option value="javascript">JavaScript</option>
-                <option value="css">CSS</option>
-                <option value="html">HTML</option>
-                <option value="langchain">LangChain</option>
-                <option value="react">React</option>
-                <option value="java">Java</option>
+                <option value="python" data-icon="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/python.svg">Python</option>
+                <option value="javascript" data-icon="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/javascript.svg">JavaScript</option>
+                <option value="css" data-icon="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/css3.svg">CSS</option>
+                <option value="html" data-icon="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/html5.svg">HTML</option>
+                <option value="langchain" data-icon="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/protocols.svg">LangChain</option>
+                <option value="react" data-icon="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/react.svg">React</option>
+                <option value="java" data-icon="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/java.svg">Java</option>
             </select>
             <input type="text" id="user-input" placeholder="Digite sua mensagem aqui">
             <button id="send-button">Enviar</button>
         </div>
     </div>
-    <script src="app.js"></script> <!-- Caminho do JavaScript atualizado -->
+    <script src="app.js"></script>
 </body>
 </html>
