@@ -3,30 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>ChatBot Estudantes de Programação</title>
-    <link rel="stylesheet" href="/styles.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">  <!-- Verifique se este caminho está correto -->
 </head>
 <body>
-    <div id="app-container">
-        <h1>ChatBot para Estudantes de Programação</h1>
-        <div id="chat-container">
-            <div id="chat-window"></div>
-            <div id="input-container">
-                <h2>Escolha seu tema</h2>
-                <select id="language-select">
-                    <option value="python">Python</option>
-                    <option value="javascript">JavaScript</option>
-                    <option value="css">CSS</option>
-                    <option value="html">HTML</option>
-                    <option value="langchain">langChain</option>
-                    <option value="react">React</option>
-                    <option value="java">Java</option>
-                </select>
-                <input type="text" id="user-input" placeholder="Digite sua pergunta...">
-                <button id="send-button">Enviar</button>
+    <div id="app-container" class="container mt-5 p-4 rounded shadow-lg">
+        <h1 class="mb-4">ChatBot para Estudantes de Programação</h1>
+        <h2 class="mb-3">Escolha sua linguagem</h2>
+        <div class="form-group">
+            <select id="language-select" class="form-control">
+                <option value="python">Python</option>
+                <option value="javascript">JavaScript</option>
+                <option value="css">CSS</option>
+                <option value="html">HTML</option>
+                <option value="langchain">LangChain</option>
+                <option value="react">React</option>
+                <option value="java">Java</option>
+            </select>
+        </div>
+        <div id="chat-container" class="border rounded p-3 mb-3">
+            <div id="chat-window" class="mb-3"></div>
+            <div id="loading-message" style="display: none;">Pesquisando...</div>
+            <div id="input-container" class="input-group">
+                <input type="text" id="user-input" class="form-control" placeholder="Digite sua pergunta...">
+                <div class="input-group-append">
+                    <button id="send-button" class="btn btn-primary">Enviar</button>
+                </div>
             </div>
         </div>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="/app.js"></script>
 </body>
 </html>

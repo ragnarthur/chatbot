@@ -49,7 +49,8 @@ def chatbot():
     if selected_language in allowed_languages and any(term in user_message for term in allowed_languages[selected_language]):
         body_mensagem = {
             "model": id_modelo,
-            "messages": [{"role": "user", "content": user_message}]
+            "messages": [{"role": "user", "content": user_message}],
+            "temperature": 0.2,
         }
         body_mensagem = json.dumps(body_mensagem)
         requisicao = requests.post(link, headers=headers, data=body_mensagem)

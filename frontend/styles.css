@@ -1,10 +1,10 @@
 /* styles.css */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f2f5;  /* Mantenha como cor de fallback */
-    background-image: url('https://cdn.pixabay.com/photo/2016/11/19/14/00/code-1839406_1280.jpg'); /* Substitua pela URL da sua imagem */
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5;
+    background-image: url('https://cdn.pixabay.com/photo/2016/11/19/14/00/code-1839406_1280.jpg');
     background-size: cover;  /* Cobrir toda a área visível sem repetir */
-    background-position: center; /* Centralizar a imagem no elemento */
+    background-position: center;  /* Centralizar a imagem no elemento */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,59 +15,50 @@ body {
 #app-container {
     width: 90%;
     max-width: 600px;
-    background-color: rgba(255, 255, 255, 0.7); /* Cor de fundo semi-transparente */
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.7);  /* Fundo semi-transparente */
+    border-radius: 10px;  /* Cantos arredondados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  /* Sombra para dar profundidade */
     padding: 30px;
-    text-align: center;
+    text-align: center;  /* Centralizar o texto */
 }
 
 h1 {
     color: #333;
-    margin-bottom: 20px;
+    font-weight: bold;  /* Texto em negrito */
+    font-size: 2em;  /* Tamanho da fonte */
 }
 
 h2 {
     color: #555;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 #chat-container {
     display: flex;
     flex-direction: column;
-    height: 700px;
+    height: 700px;  /* Aumentar a altura para 700px */
     border: 1px solid #ddd;
-    border-radius: 10px;
+    border-radius: 10px;  /* Cantos arredondados */
     overflow: hidden;
-    background-color: rgba(249, 249, 249, 0.9); /* Fundo semi-transparente */
+    background-color: rgba(133, 131, 131, 0.5);  /* Fundo semi-transparente */
+    backdrop-filter: blur(10px);  /* Adiciona um efeito de desfoque */
 }
 
 #chat-window {
     flex: 1;
     padding: 10px;
-    overflow-y: auto;
-    background-color: rgba(249, 249, 249, 0.9); /* Fundo semi-transparente */
+    overflow-y: auto;  /* Habilita rolagem vertical */
+    background-color: rgba(255, 255, 255, 0.5);  /* Fundo levemente transparente */
 }
 
 #input-container {
     display: flex;
-    flex-direction: column;
     border-top: 1px solid #ddd;
     padding: 10px;
-    background-color: rgba(255, 255, 255, 0.9); /* Fundo semi-transparente */
-}
-
-#language-select, #user-input, #send-button {
-    margin-top: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    transition: all 0.3s;
+    background-color: rgba(255, 255, 255, 0.7);  /* Fundo semi-transparente */
 }
 
 #language-select {
-    background-color: #fff;
-    color: #333;
     font-size: 16px;
     cursor: pointer;
 }
@@ -75,6 +66,7 @@ h2 {
 #user-input {
     flex: 1;
     font-size: 16px;
+    border-radius: 5px 0 0 5px;  /* Cantos arredondados à esquerda */
 }
 
 #send-button {
@@ -84,35 +76,45 @@ h2 {
     border: none;
     cursor: pointer;
     font-size: 16px;
-    align-self: flex-end;
-    margin-top: 10px;
+    border-radius: 0 5px 5px 0;  /* Cantos arredondados à direita */
     transition: background-color 0.3s, transform 0.3s;
 }
 
 #send-button:hover {
     background-color: #0056b3;
-    transform: translateY(-2px);
+    transform: translateY(-2px);  /* Leve movimento para cima ao passar o mouse */
+}
+
+#loading-message {
+    color: #555;
+    text-align: center;
+    font-style: italic;
+    margin-top: 10px;
 }
 
 .user-message, .bot-message {
     max-width: 70%;
     margin-bottom: 10px;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 10px;  /* Cantos arredondados */
     animation: fadeIn 0.5s;
+    font-size: 1rem;  /* Texto um pouco maior */
+    font-family: 'Roboto', sans-serif;  /* Fonte moderna */
 }
 
 .user-message {
-    text-align: right;
-    background-color: #dcf8c6;
+    text-align: right;  /* Alinhar à direita */
+    background-color: rgba(220, 248, 198, 0.7);  /* Fundo semi-transparente */
     align-self: flex-end;
+    color: #333;
 }
 
 .bot-message {
-    text-align: left;
-    background-color: #fff;
+    text-align: left;  /* Alinhar à esquerda */
+    background-color: rgba(255, 255, 255, 0.7);  /* Fundo semi-transparente */
     border: 1px solid #ddd;
     align-self: flex-start;
+    color: #333;
 }
 
 /* Animação de fade-in */
