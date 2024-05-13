@@ -9,7 +9,7 @@ Welcome to the ChatBot repository! This project uses the OpenAI API to create an
 - [Installation](#installation)
 - [Configuration](#configuration)
 - [Usage](#usage)
-- [Contribution](#contribution)
+- [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
 
@@ -61,20 +61,19 @@ To start the ChatBot, run the following command in your terminal:
 ```bash
 python app.py
 ```
-🤝 Contributing
+## 🤝 Contributing
 Contributions are welcome! If you have suggestions for improvements or encounter any issues:
 
 Report Bugs: Open an issue describing the bug.
 Feature Requests: Open an issue with a detailed description of the feature.
 Submit Changes: Submit a pull request with your proposed changes. For significant changes, please open an issue first to discuss what you would like to change.
-📜 License
+
+## 📜 License
 This project is licensed under the MIT License. For more details, see the LICENSE file.
 
-📞 Contact
+## 📞 Contact
 If you want to get in touch with me or follow my work, here are some ways to do it:
 
 Email: arthuraraujo07@hotmail.com
 GitHub: ragnarthur
 Instagram: @arthuraraujo07
-
-
