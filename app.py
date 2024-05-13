@@ -7,17 +7,26 @@ app = Flask(__name__, static_folder='frontend')
 
 # Dicionário de linguagens de programação permitidas e termos relacionados
 allowed_languages = {
-    'python': ['python', 'py', 'pandas', 'flask', 'django', 'numpy', 'scipy', 'pip', 'matplotlib',
-               'tkinter',"seaborn",'pytest', 'pycharm', 'jupyter','anacondax', 'virtualenv',
-               'dataframe', 'sklearn', 'tensorflow','keras'],
-    'javascript': ['javascript', 'js', 'node.js', 'node', 'react', 'react.js', 'vue', 'vue.js', 
-                   'angular', 'angular.js', 'express', 'npm', 'yarn', 'webpack', 'babel',
-                   'typescript', 'ts', 'jest'],
-    'css': ['css', 'css3', 'flexbox', 'grid'],
-    'html': ['html', 'html5'],
-    'langchain': ['langchain', 'lcc'],
-    'react': ['react', 'react.js', 'jsx', 'react native'],
-    'java': ['java', 'javafx', 'spring', 'jvm', 'jdk']
+    'python': ['python', 'py', 'pandas', 'flask', 'django', 'numpy', 'scipy', 'tkinter', 'matplotlib', 
+               'seaborn', 'pytest', 'pycharm', 'jupyter', 'anaconda', 'pip', 'virtualenv', 'dataframe', 'sklearn', 
+               'tensorflow', 'keras'],
+    'javascript': ['javascript', 'js', 'node.js', 'node', 'react', 'react.js', 'vue', 'vue.js', 'angular',
+                    'angular.js', 'express', 'npm', 'yarn', 'webpack', 'babel', 'typescript', 'ts', 'jest', 'mocha', 
+                    'chai', 'electron', 'd3.js', 'three.js'],
+    'css': ['css', 'css3', 'flexbox', 'grid', 'media queries', 'sass', 'scss', 'less', 'bootstrap', 'tailwind', 
+            'responsive design', 'animations', 'transitions', 'selectors', 'variables', 'borders', 'margins', 'padding'],
+    'html': ['html', 'html5', 'semantic html', 'forms', 'input types', 'canvas', 'svg', 'tables', 'head', 'meta', 'links',
+              'doctype', 'elements', 'tags', 'attributes', 'inline', 'block', 'iframes', 'media', 'accessibility', 
+              'web components'],
+    'langchain': ['langchain', 'lcc', 'language chain', 'nlp', 'text processing', 'tokenization', 'lemmatization', 
+                  'stemming', 'ner', 'named entity recognition', 'sentiment analysis', 'language models', 'text generation', 
+                  'language modeling'],
+    'react': ['react', 'react.js', 'jsx', 'react native', 'redux', 'react hooks', 'context api', 'next.js', 'gatsby', 
+              'create-react-app', 'component', 'props', 'state', 'lifecycle', 'effect', 'memo', 'ref', 'router', 'flux',
+                'server-side rendering', 'ssr', 'hydration', 'virtual dom'],
+    'java': ['java', 'javafx', 'spring', 'jvm', 'jdk', 'jre', 'maven', 'gradle', 'intellij', 'eclipse', 'netbeans', 
+             'servlet', 'jsp', 'jdbc', 'hibernate', 'junit', 'lambda', 'streams', 'multithreading', 'concurrency', 
+             'collections', 'garbage collection', 'jpa', 'swing', 'applet']
 }
 
 headers = {"Authorization": f"Bearer {API_KEY}", "Content-Type": "application/json"}

@@ -15,10 +15,10 @@ body {
 #app-container {
     width: 90%;
     max-width: 600px;
-    background-color: rgba(255, 255, 255, 0.8); /* Cor de fundo semi-transparente */
+    background-color: rgba(255, 255, 255, 0.7); /* Cor de fundo semi-transparente */
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 30px;
     text-align: center;
 }
 
