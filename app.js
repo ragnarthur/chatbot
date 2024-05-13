@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
         showLoading(true);
 
         try {
-            const response = await fetch('/chatbot', {
+            const response = await fetch('https://<seu-app>.up.railway.app/chatbot', {  // Atualize esta URL
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ message: userMessage, language: selectedLanguage })
@@ -53,12 +53,23 @@ document.addEventListener('DOMContentLoaded', function () {
         return text.replace(/</g, '&lt;').replace(/>/g, '&gt;');
     }
 
+    function updateSelectIcon() {
+        const selectedOption = languageSelect.options[languageSelect.selectedIndex];
+        const iconUrl = selectedOption.getAttribute('data-icon');
+        languageSelect.style.backgroundImage = `url(${iconUrl})`;
+    }
+
     sendButton.addEventListener('click', sendMessage);
     userInput.addEventListener('keypress', function (event) {
         if (event.key === 'Enter') {
             sendMessage();
         }
     });
+
+    languageSelect.addEventListener('change', updateSelectIcon);
+
+    // Inicializa o ícone com a opção selecionada por padrão
+    updateSelectIcon();
 
     // Exibir a mensagem de boas-vindas ao carregar a página
     showWelcomeMessage();
