@@ -2,12 +2,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const chatWindow = document.getElementById('chat-window');
     const userInput = document.getElementById('user-input');
     const sendButton = document.getElementById('send-button');
-    const customSelectButton = document.getElementById('custom-select-button');
-    const customSelectList = document.getElementById('custom-select-list');
-    const customSelectContainer = document.getElementById('custom-select-container');
+    const languageSelect = document.getElementById('language-select');
     const loadingMessage = document.getElementById('loading-message');
-
-    let selectedLanguage = '';
 
     // Função para exibir mensagem de boas-vindas
     function showWelcomeMessage() {
@@ -17,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     async function sendMessage() {
         const userMessage = userInput.value.trim();
+        const selectedLanguage = languageSelect.value.trim();
         if (!userMessage || !selectedLanguage) return;
 
         addMessageToChat('Você', userMessage, 'user-message');
@@ -55,24 +52,6 @@ document.addEventListener('DOMContentLoaded', function () {
     function escapeHtml(text) {
         return text.replace(/</g, '&lt;').replace(/>/g, '&gt;');
     }
-
-    customSelectButton.addEventListener('click', function () {
-        customSelectList.classList.toggle('show');
-    });
-
-    customSelectList.addEventListener('click', function (e) {
-        if (e.target.tagName === 'LI') {
-            selectedLanguage = e.target.getAttribute('data-value');
-            customSelectButton.innerHTML = e.target.innerHTML;
-            customSelectList.classList.remove('show');
-        }
-    });
-
-    document.addEventListener('click', function (e) {
-        if (!customSelectContainer.contains(e.target) && e.target !== customSelectButton) {
-            customSelectList.classList.remove('show');
-        }
-    });
 
     sendButton.addEventListener('click', sendMessage);
     userInput.addEventListener('keypress', function (event) {

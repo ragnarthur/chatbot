@@ -76,59 +76,63 @@ h2 {
     background-color: rgba(255, 255, 255, 0.9);
 }
 
-#custom-select-container {
-    position: relative;
-    width: 100%;
-}
-
-#custom-select-button {
-    width: 100%;
-    background-color: #007bff;
-    color: white;
+#language-select {
+    flex: 0 0 200px; /* Aumentado para 200px */
+    margin-right: 10px;
     font-size: 16px;
-    padding: 10px;
     border-radius: 5px;
-    margin-bottom: 20px;
-}
-
-#custom-select-list {
-    position: absolute;
-    width: 100%;
-    max-height: 200px;
-    overflow-y: auto;
-    z-index: 1;
-    display: none;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-}
-
-#custom-select-list.show {
-    display: block;
-}
-
-#custom-select-list li {
     padding: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    background-image: none;
 }
 
-#custom-select-list li:hover {
-    background-color: #007bff;
-    color: white;
+#language-select option {
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 30px;
 }
 
-#user-input, #send-button {
+#language-select .python {
+    background-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/python.svg');
+}
+
+#language-select .javascript {
+    background-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/javascript.svg');
+}
+
+#language-select .css {
+    background-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/css3.svg');
+}
+
+#language-select .html {
+    background-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/html5.svg');
+}
+
+#language-select .langchain {
+    background-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/protocols.svg');
+}
+
+#language-select .react {
+    background-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/react.svg');
+}
+
+#language-select .java {
+    background-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/java.svg');
+}
+
+#user-input {
+    flex: 1;
     font-size: 16px;
-    padding: 10px;
-    border-radius: 5px;
+    border-radius: 5px 0 0 5px;
 }
 
 #send-button {
+    padding: 10px 20px;
     background-color: #007bff;
     color: white;
     border: none;
     cursor: pointer;
+    font-size: 16px;
+    border-radius: 0 5px 5px 0;
     transition: background-color 0.3s, transform 0.3s;
 }
 
@@ -199,5 +203,10 @@ h2 {
 
     #chat-container {
         height: 400px;
+    }
+
+    #language-select {
+        flex: 0 0 100px; /* Largura reduzida para telas menores */
+        font-size: 14px;
     }
 }
