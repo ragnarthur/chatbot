@@ -2,22 +2,29 @@ document.addEventListener('DOMContentLoaded', function () {
     const chatWindow = document.getElementById('chat-window');
     const userInput = document.getElementById('user-input');
     const sendButton = document.getElementById('send-button');
-    const languageSelect = document.getElementById('language-select');
+    const customSelectButton = document.getElementById('custom-select-button');
+    const customSelectList = document.getElementById('custom-select-list');
+    const customSelectContainer = document.getElementById('custom-select-container');
+    const loadingMessage = document.getElementById('loading-message');
+
+    let selectedLanguage = '';
+
+    // Função para exibir mensagem de boas-vindas
+    function showWelcomeMessage() {
+        const welcomeMessage = "Bem vindo ao ChatBot - Guide, seu guia para estudos em programação! Lembre-se de relacionar os temas do seu estudo com a linguagem específica! Bons estudos!";
+        addMessageToChat('Guide', welcomeMessage, 'bot-message');
+    }
 
     async function sendMessage() {
         const userMessage = userInput.value.trim();
-        const selectedLanguage = languageSelect.value.trim();
         if (!userMessage || !selectedLanguage) return;
 
-        // Adiciona a mensagem do usuário ao chat
-        addMessageToChat('user', userMessage);
+        addMessageToChat('Você', userMessage, 'user-message');
         userInput.value = ''; // Limpa o campo de input
 
-        // Mostra a mensagem de carregamento e esconde após resposta
-        showLoadingMessage(true);
+        showLoading(true);
 
         try {
-            // Envia a mensagem ao backend para obter a resposta
             const response = await fetch('/chatbot', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -25,42 +32,47 @@ document.addEventListener('DOMContentLoaded', function () {
             });
             const data = await response.json();
             const botResponse = escapeHtml(data.response);
-
-            // Adiciona a resposta do bot ao chat
-            addMessageToChat('bot', botResponse);
+            addMessageToChat('Guide', botResponse, 'bot-message');
         } catch (error) {
             console.error('Error:', error);
         } finally {
-            // Sempre esconde a mensagem de carregamento
-            showLoadingMessage(false);
+            showLoading(false);
         }
     }
 
-    function addMessageToChat(role, message) {
+    function addMessageToChat(sender, message, messageType) {
         const messageElement = document.createElement('div');
-        messageElement.classList.add(`${role}-message`);
-        messageElement.innerHTML = `<strong>${role === 'user' ? 'Você' : 'Bot'}:</strong> ${message}`;
+        messageElement.classList.add(messageType);
+        messageElement.innerHTML = `<strong>${sender}:</strong> ${message}`;
         chatWindow.appendChild(messageElement);
         chatWindow.scrollTop = chatWindow.scrollHeight;
     }
 
-    function showLoadingMessage(show) {
-        const loadingMessage = document.getElementById('loading-message') || createLoadingMessage();
-        loadingMessage.style.display = show ? 'block' : 'none';
-    }
-
-    function createLoadingMessage() {
-        const loadingMessage = document.createElement('div');
-        loadingMessage.id = 'loading-message';
-        loadingMessage.textContent = 'Pesquisando...';
-        loadingMessage.style.display = 'none';
-        chatWindow.appendChild(loadingMessage);
-        return loadingMessage;
+    function showLoading(isLoading) {
+        loadingMessage.style.display = isLoading ? 'block' : 'none';
     }
 
     function escapeHtml(text) {
         return text.replace(/</g, '&lt;').replace(/>/g, '&gt;');
     }
+
+    customSelectButton.addEventListener('click', function () {
+        customSelectList.classList.toggle('show');
+    });
+
+    customSelectList.addEventListener('click', function (e) {
+        if (e.target.tagName === 'LI') {
+            selectedLanguage = e.target.getAttribute('data-value');
+            customSelectButton.innerHTML = e.target.innerHTML;
+            customSelectList.classList.remove('show');
+        }
+    });
+
+    document.addEventListener('click', function (e) {
+        if (!customSelectContainer.contains(e.target) && e.target !== customSelectButton) {
+            customSelectList.classList.remove('show');
+        }
+    });
 
     sendButton.addEventListener('click', sendMessage);
     userInput.addEventListener('keypress', function (event) {
@@ -68,4 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
             sendMessage();
         }
     });
+
+    // Exibir a mensagem de boas-vindas ao carregar a página
+    showWelcomeMessage();
 });
