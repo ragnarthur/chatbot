@@ -19,7 +19,7 @@ allowed_languages = {
             'responsive design', 'animations', 'transitions', 'selectors', 'variables', 'borders', 'margins', 'padding', "scripts"],
     'html': ['html', 'html5', 'semantic html', 'forms', 'input types', 'canvas', 'svg', 'tables', 'head', 'meta', 'links',
               'doctype', 'elements', 'tags', 'attributes', 'inline', 'block', 'iframes', 'media', 'accessibility', 
-              'web components', "scripts"],
+              'web components', "scripts","SEO", "semântico","responsividade", "acessibilidade", "tabelas"],
     'langchain': ['langchain', 'lcc', 'language chain', 'nlp', 'text processing', 'tokenization', 'lemmatization', 
                   'stemming', 'ner', 'named entity recognition', 'sentiment analysis', 'language models', 'text generation', 
                   'language modeling', 'framework', "scripts"],
