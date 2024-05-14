@@ -1,4 +1,3 @@
-/* styles.css */
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #f0f2f5;
@@ -8,44 +7,47 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
+    padding: 10px; /* Adicionado padding para melhor ajuste em telas menores */
 }
 
 #app-container {
-    width: 90%;
+    width: 100%;
     max-width: 900px;
     background: rgba(255, 255, 255, 0.5); /* Fundo translúcido */
     border-radius: 15px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-    padding: 40px;
+    padding: 20px; /* Reduzido para elevar o título */
     text-align: center;
     backdrop-filter: blur(10px);
+    box-sizing: border-box; /* Garantir que padding seja incluído na largura total */
 }
 
 h1 {
     font-size: 2.5em;
     color: #333;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 10px; /* Reduzido para elevar o título */
 }
 
 h2 {
     font-size: 1.8em;
     color: #555;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 10px; /* Reduzido para elevar o título */
 }
 
 #chat-container {
     display: flex;
     flex-direction: column;
-    height: 600px;
+    height: 75vh; /* Alterado para unidade relativa para melhor ajuste em telas menores */
     border: 1px solid rgba(255, 255, 255, 0.5); /* Borda translúcida */
     border-radius: 15px;
     overflow: hidden;
     background-color: rgba(240, 240, 240, 0.5); /* Fundo translúcido */
     backdrop-filter: blur(10px);
+    box-sizing: border-box; /* Garantir que padding seja incluído na altura total */
 }
 
 #chat-window {
@@ -72,14 +74,16 @@ h2 {
 
 #input-container {
     display: flex;
+    flex-wrap: wrap; /* Permite quebra de linha para inputs em telas pequenas */
     border-top: 1px solid rgba(255, 255, 255, 0.5); /* Borda translúcida */
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.8); /* Fundo translúcido */
     backdrop-filter: blur(10px);
+    box-sizing: border-box; /* Garantir que padding seja incluído na largura total */
 }
 
 #language-select {
-    flex: 0 0 200px;
+    flex: 0 0 180px; /* Reduzido para dar mais espaço ao input de texto */
     margin-right: 10px;
     font-size: 16px;
     border-radius: 5px;
@@ -119,7 +123,7 @@ h2 {
 }
 
 .user-message, .bot-message {
-    max-width: 90%;
+    max-width: 95%; /* Aumentado para usar mais espaço horizontal */
     margin-bottom: 10px;
     padding: 15px;
     border-radius: 15px;
@@ -129,6 +133,10 @@ h2 {
     clear: both;
     word-wrap: break-word;
     white-space: pre-wrap; /* Mantém a formatação e quebra de linha */
+}
+
+.welcome-message {
+    animation: slideIn 1s ease-out; /* Adiciona animação de entrada */
 }
 
 .user-message {
@@ -199,11 +207,28 @@ h2 {
     }
 }
 
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 @media (max-width: 768px) {
+    body {
+        min-height: auto;
+        padding: 10px;
+    }
+
     #app-container {
         padding: 15px;
-        width: 95%;
+        width: 100%;
         max-width: none;
+        margin: 10px;
     }
 
     h1, h2 {
@@ -211,11 +236,41 @@ h2 {
     }
 
     #chat-container {
-        height: 400px;
+        height: auto;
+        max-height: 400px;
     }
 
     #language-select {
-        flex: 0 0 100px;
+        flex: 1 0 100px;
         font-size: 14px;
+        margin-bottom: 10px; /* Espaçamento para quando os elementos quebrarem de linha */
+    }
+
+    #user-input {
+        flex: 2 0 100%;
+        font-size: 14px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    #send-button {
+        flex: 1 0 100px;
+        font-size: 14px;
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1, h2 {
+        font-size: 1em;
+    }
+
+    #input-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #send-button {
+        padding: 10px;
     }
 }
