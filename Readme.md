@@ -75,5 +75,7 @@ Este projeto está licenciado sob a Licença MIT. Para mais detalhes, veja o arq
 Se você quiser entrar em contato comigo ou acompanhar meu trabalho, aqui estão algumas maneiras de fazer isso:
 
 Email: arthuraraujo07@hotmail.com
+
 GitHub: ragnarthur
+
 Instagram: @arthuraraujo07
