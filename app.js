@@ -8,7 +8,11 @@ document.addEventListener('DOMContentLoaded', function () {
     // Função para exibir mensagem de boas-vindas
     function showWelcomeMessage() {
         const welcomeMessage = "Bem vindo ao ChatBot - Guide, seu guia para estudos em programação! Lembre-se de relacionar os temas do seu estudo com a linguagem específica! Bons estudos!";
-        addMessageToChat('Guide', welcomeMessage, 'bot-message');
+        const messageElement = document.createElement('div');
+        messageElement.classList.add('bot-message', 'welcome-message');
+        messageElement.innerHTML = `<strong>Guide:</strong> ${welcomeMessage}`;
+        chatWindow.appendChild(messageElement);
+        chatWindow.scrollTop = chatWindow.scrollHeight;
     }
 
     async function sendMessage() {
