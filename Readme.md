@@ -1,78 +1,79 @@
-# 🤖 ChatBot com API da OpenAI
+# 🤖 ChatBot with OpenAI API
 
-Bem-vindo ao repositório do ChatBot! Este projeto utiliza a API da OpenAI para criar um chatbot inteligente capaz de responder a várias perguntas e realizar diversas tarefas automatizadas.
+Welcome to the ChatBot repository! This project uses the OpenAI API to create an intelligent chatbot capable of answering various questions and performing a range of automated tasks.
 
-## 📋 Índice
+## 📋 Table of Contents
 
-- [Introdução](#introdução)
-- [Recursos](#recursos)
-- [Instalação](#instalação)
-- [Configuração](#configuração)
-- [Uso](#uso)
-- [Contribuição](#contribuição)
-- [Licença](#licença)
-- [Contato](#contato)
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-## 📘 Introdução
+## 📘 Introduction
 
-Este ChatBot foi desenvolvido para demonstrar as capacidades da API da OpenAI. Ele pode ser utilizado para diversos fins, desde atendimento ao cliente até assistentes pessoais.
+This ChatBot was developed to demonstrate the capabilities of the OpenAI API. It can be used for various purposes, from customer service to personal assistants.
 
-## ✨ Recursos
+## ✨ Features
 
-- Respostas automatizadas para perguntas comuns
-- Capacidade de manter o contexto da conversa
-- Fácil integração com outras plataformas
-- Personalização de respostas
+- Automated responses to common questions
+- Ability to maintain conversation context
+- Easy integration with other platforms
+- Customizable responses
 
-## 🛠️ Instalação
+## 🛠️ Installation
 
-Para instalar o projeto, siga os passos abaixo:
+To install the project, follow these steps:
 
-1. Clone o repositório:
+1. Clone the repository:
     ```bash
     git clone https://github.com/your-username/your-repository.git
     cd your-repository
     ```
 
-2. Crie e ative um ambiente virtual (opcional, mas recomendado):
+2. Create and activate a virtual environment (optional, but recommended):
     ```bash
     python -m venv venv
     source venv/bin/activate  # Linux/MacOS
     .\venv\Scripts\activate  # Windows
     ```
 
-3. Instale as dependências:
+3. Install the dependencies:
     ```bash
     pip install -r requirements.txt
     ```
 
-## 🔧 Configuração
+## 🔧 Configuration
 
-1. Obtenha uma chave de API da OpenAI em [OpenAI API](https://beta.openai.com/signup/).
-2. Crie um arquivo `.env` na raiz do projeto e adicione sua chave de API:
+1. Obtain an API key from OpenAI at [OpenAI API](https://beta.openai.com/signup/).
+2. Create a `.env` file in the root directory of the project and add your API key:
     ```env
-    OPENAI_API_KEY=sua-chave-de-api
+    OPENAI_API_KEY=your-api-key
     ```
 
-## 🚀 Uso
+## 🚀 Usage
 
-Para iniciar o ChatBot, execute o seguinte comando no seu terminal:
+To start the ChatBot, run the following command in your terminal:
 
 ```bash
 python app.py
 ```
-## 🤝 Contribuição
-Contribuições são bem-vindas! Se você tem sugestões de melhorias ou encontra algum problema:
+## 🤝 Contributing
+Contributions are welcome! If you have suggestions for improvements or encounter any issues:
 
-Relate Bugs: Abra uma issue descrevendo o bug.
-Solicitações de Recursos: Abra uma issue com uma descrição detalhada do recurso.
-Envie Alterações: Envie um pull request com suas propostas de alterações. Para mudanças significativas, por favor, abra uma issue primeiro para discutir o que você gostaria de mudar.
+Report Bugs: Open an issue describing the bug.
+Feature Requests: Open an issue with a detailed description of the feature.
+Submit Changes: Submit a pull request with your proposed changes. For significant changes, please open an issue first to discuss what you would like to change.
 
-## 📜 Licença
-Este projeto está licenciado sob a Licença MIT. Para mais detalhes, veja o arquivo LICENSE.
+## 📜 License
 
-## 📞 Contato
-Se você quiser entrar em contato comigo ou acompanhar meu trabalho, aqui estão algumas maneiras de fazer isso:
+This project is licensed under the MIT License. For more details, see the LICENSE file.
+
+## 📞 Contact
+If you want to get in touch with me or follow my work, here are some ways to do so:
 
 Email: arthuraraujo07@hotmail.com
 
